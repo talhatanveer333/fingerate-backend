@@ -1,0 +1,51 @@
+export enum TransactionEnum {
+  ALL = 'all',
+  IN = 'in',
+  OUT = 'out',
+}
+
+export enum InfoReward {
+  THIRTY = 30
+}
+
+export enum RespectLevel {
+  ONE = 1,
+  TWO = 2,
+  THREE = 3,
+  FOUR = 4,
+  FIVE = 5,
+  SIX = 6,
+  SEVEN = 7
+}
+
+export enum RespectLevelPoints {
+  ZERO = 0,
+  FIFTY = 50,
+  FIFTY_ONE = 51,
+  ONE_FIFTY = 150,
+  ONE_FIFTY_ONE = 151,
+  THREE_HUNDRED = 300,
+  THREE_HUNDRED_ONE = 301,
+  FOUR_SEVENTY_FIVE = 475,
+  FOUR_SEVENTY_SIX = 476,
+  SEVEN_HUNDRED = 700,
+  SEVEN_HUNDRED_ONE = 701,
+  NINE_FIFTY = 950
+}
+
+export enum RespectLevelPolicyPoints {
+  DETAILED_INFORMATION = 10,
+  MORE_THAN_TEN_ATTENDANCE = 5,
+  TEN_CONSECUTIVE_ATTENDANCE = 10,
+  THIRTY_CONSECUTIVE_ATTENDANCE = 50,
+  MORE_THAN_TEN_PARTICIPATION = 10,
+  TEN_CONSECUTIVE_PARTICIPATION = 30,
+  THIRTY_CONSECUTIVE_PARTICIPATION = 100,
+  TEN_COMMENT_LIKES = 3,
+  REFERRAL_PER_PERSON = 3,
+  SURVEY_REQUEST = 3,
+  SOM_RECHARGE = 1,
+  ITEM_PURCHASE = 1,
+  PER_COMMENT = 1
+  }
+  

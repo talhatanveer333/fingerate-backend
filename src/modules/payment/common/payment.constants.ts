@@ -1,0 +1,1 @@
+export const SomToDollarRate = 0.1;

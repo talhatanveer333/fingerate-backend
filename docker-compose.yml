@@ -1,0 +1,49 @@
+version: "2"
+services:
+  redis:
+    image: 'bitnami/redis:latest'
+    volumes:
+      - redis:/var/lib/redis/data/
+    container_name: 'fingrate-redis'
+    restart: 'always'
+    env_file:
+      - _database.env
+    ports:
+      - '6379:6379'
+    networks:
+      - fingrate-backend
+
+  postgres:
+    image: 'postgis/postgis'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data/
+    container_name: 'fingrate-db'
+    restart: 'always'
+    env_file:
+      - _database.env
+    ports:
+      - '5432:5432'
+    networks:
+      - fingrate-backend
+
+  fingrate-backend:
+    build:
+      context: .
+    image: fingrate-backend:latest
+    container_name: fingrate-backend
+    depends_on:
+      - postgres
+
+    volumes:
+      - ./src:/app/src
+      - .env:/app/.env
+    ports:
+      - '3836:3836'
+    networks:
+      - fingrate-backend
+
+networks:
+  fingrate-backend:
+volumes:
+  postgres-data:
+
